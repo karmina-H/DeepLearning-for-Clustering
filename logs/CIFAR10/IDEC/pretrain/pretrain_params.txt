@@ -1,0 +1,36 @@
+[Saved at 2025-07-11 12:50:45]
+
+seed: 2024
+reuse: False
+device: cuda
+cuda_visible_devices: ['0', '1', '2', '3', '4', '5', '6', '7']
+data_parallel: False
+cuda_parallel_devices: ['0', '1', '2', '3', '4', '5', '6', '7']
+dataset_dir: ~/dataset/
+dataset_name: CIFAR10
+class_num: 10
+grey: False
+img_size_at: [64, 64]
+optimizer: Adam
+adam_beta1: 0.5
+adam_beta2: 0.999
+sgd_momentum: 0.9
+lr: 0.4
+weight_decay: 0.0001
+batch_size: 256
+num_workers: 32
+start_epoch: 1
+epochs: 1000
+eval_batch_size: 128
+eval_step: 1
+log_dir: ./logs/CIFAR10/IDEC/pretrain
+verbose: False
+save_step: 10
+model_dir: ./model_saves/CIFAR10/IDEC/pretrain
+use_vision: True
+backbone: resnet18
+pretrained: True
+dims: [500, 500, 2000, 10]
+pretrain_path: ./model_saves/CIFAR10/IDEC/pretrain/ckpt_100000.pt
+gamma: 0.1
+method_name: IDEC
